@@ -1,0 +1,87 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: inherit;
+    padding: inherit;
+}
+
+.eg {
+    height: 100px;
+
+    display: grid;
+    grid-template-columns: 5% auto;
+
+    box-sizing: border-box;
+    margin: 10px;
+    
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+
+    transition: 300ms;
+}
+
+.eg:has(.eg-left:hover) {
+    grid-template-columns: 40% auto;
+}
+
+.eg div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 1rem;
+
+    border-bottom: solid 1px black;
+    border-right: solid 1px black;
+}
+
+.eg-2 {
+    height: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    box-sizing: border-box;
+    margin: 10px;
+
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+
+    transition: 300ms;
+}
+
+.eg-2 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 1rem;
+
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+
+    transition: 300ms;
+}
+
+.eg-2 div:hover {
+    background-color: brown;
+}
+
+.eg-2:has(.eg-2-left:hover) {
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+}
+
+.eg-2:has(.eg-2-center:hover) {
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+
+.eg-2:has(.eg-2-right:hover) {
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+}
+
