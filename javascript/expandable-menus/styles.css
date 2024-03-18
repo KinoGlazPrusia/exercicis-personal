@@ -1,0 +1,30 @@
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(185, 137, 137);
+}
+
+.map-grid {
+    margin: auto;
+    padding: 2em;
+    box-sizing: border-box;
+
+    height: 100vh;
+    aspect-ratio: 1/1;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.map-cell { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: aquamarine;
+}
